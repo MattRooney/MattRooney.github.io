@@ -9,7 +9,7 @@
   <body>
     <header class="primary-nav container group">
       <h1 class="logo">
-        <a id='primary-header' href="index.html">Matt Rooney</a>
+        <a id='primary-header' onclick="noFocus()">Matt Rooney</a>
       </h1>
       <div class='nav nav-options'>
         <a id='development' onclick="focus('development')">Software Development</a>
@@ -27,8 +27,8 @@
             <h5>Developer at <a href="http://www.harryfox.com/" target="_blank">SESAC / Harry Fox</a></h5>
             <p>I've lead the Front-End team through our first two major
               <a href="http://hub.harryfox.com">hub.harryfox.com</a> releases and contributed to bug fixes,
-              our first microservice and new features on the backend. Our stack includes Ruby, Angular, Docker,
-              CoffeeScript, RabbitMQ, Gulp, Solr, Oracle and AWS. You can find my code on
+              our first microservice and new features on the backend. Our stack includes Ruby, Trailblazer, Docker,
+              Solr, RabbitMQ, Angular, CoffeeScript, Gulp, Oracle and MySQL. You can find my code on
               <a href="https://github.com/MattRooney">GitHub</a>
             </p>
           </section>
@@ -91,13 +91,20 @@
         });
       });
 
+      function noFocus() {
+        var divs = ["#developer", "#music", "#about"]
+        divs.forEach(function(div) {
+          $("" + div + "-blurb").hide();
+        })
+      };
+
       function focus(focus) {
         var divs = ["#developer", "#music", "#about"]
         $("" + focus + "-blurb").toggle("fast");
         divs.forEach(function(div) {
           if (div != focus) { $("" + div + "-blurb").hide(); }
         })
-      }
+      };
     </script>
   </body>
 </html>
