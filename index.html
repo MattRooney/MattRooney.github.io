@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+l<!DOCTYPE html>
 <html lang="em">
   <head>
     <meta charset="utf-8">
@@ -19,17 +19,21 @@
       </div class='nav-options'>
     </header>
     <section class="hero container">
-      <a src="/assets/images/wood-background.jpg"></a>
       <ul class="main-list">
+        <li>
+          <section id='mug-blurb' class="hero">
+            <img src='assets/images/bw-matt.jpg' class='small-round-pic'></img>
+          </section>
+        </li>
 
         <li>
           <section id='developer-blurb' class="hero blurb">
             <h5>Developer at <a href="http://www.harryfox.com/" target="_blank">SESAC / Harry Fox</a></h5>
             <p>I've lead the Front-End team through our first two major
-              <a href="http://hub.harryfox.com">hub.harryfox.com</a> releases and contributed to bug fixes,
+              <a href="http://hub.harryfox.com" style='color: #29a57e'>hub.harryfox.com</a> releases and contributed to bug fixes,
               our first microservice and new features on the backend. Our stack includes Ruby, Trailblazer, Docker,
-              Solr, RabbitMQ, Angular, CoffeeScript, Gulp, Oracle and MySQL. You can find my code on
-              <a href="https://github.com/MattRooney">GitHub</a>
+              Solr, RabbitMQ, AngularJS, CoffeeScript, Gulp, Oracle and MySQL. You can find my code on
+              <a href="https://github.com/MattRooney" style='color: #29a57e'>GitHub</a>
             </p>
           </section>
         </li>
@@ -39,13 +43,13 @@
             <p>I play guitar, write songs and have dreams of composing the next great podcast theme. If you're looking
               for a guitarist or collaborator in Atlanta, <a href="mailto:matthewjrooney@gmail.com?Subject=Hey, there%20Matt" target="_top">contact me</a>.</p>
             <h5>Some tracks</h5>
-            <iframe width="100%" height="166" scrolling="no" frameborder="no"
+            <iframe width="50%" height="115" scrolling="no" frameborder="no"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/80875565&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
             <!-- <iframe width="100%" height="166" scrolling="no" frameborder="no"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/80875458&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
             <iframe width="100%" height="166" scrolling="no" frameborder="no"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/80784016&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe> -->
-            <iframe width="100%" height="166" scrolling="no" frameborder="no"
+            <iframe width="50%" height="115" scrolling="no" frameborder="no"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/80783673&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
           </section>
         </li>
@@ -54,7 +58,7 @@
 
         <li>
           <section id='about-blurb' class='hero blurb'>
-            <p>I grew up in <a href="https://en.wikipedia.org/wiki/Ballston_Spa,_New_York" target="_blank">
+            <p>I grew up in <a href="https://en.wikipedia.org/wiki/Ballston_Spa,_New_York" target="_blank" style='color: #29a57e'>
               Ballston Spa, NY</a>, studied music business at Northeastern University, and lived in New York City,
               Denver, CO, and Portland, OR before finding my new home in Atlanta, GA.</p>
             <p>I like guitars, food, travel, hockey, the NY Yankees and making
@@ -68,7 +72,7 @@
       <nav class="nav">
         <ul>
           <li><a class="btn" href="mailto:matthewjrooney@gmail.com?Subject=Hey, there%20Matt" target="_top"><img src="assets/images/logo_gmail_128px.png"></a></li>
-          <li><a class="btn" href="https://github.com/MattRooney"><img src="assets/images/GitHub-Mark-Light-75px.png"></a></li>
+          <li><a class="btn" href="https://github.com/MattRooney"><img src="assets/images/GitHub-Mark-120px-plus.png"></a></li>
           <li><a class="btn" href="https://www.linkedin.com/in/mattrooney1"><img src="assets/images/In-2CRev-75px-R.png"></a></li>
           <li><a class="btn" href="https://twitter.com/Roondoggle"><img src="assets/images/twitterlogo.png"></a></li>
         </ul>
@@ -96,11 +100,12 @@
         divs.forEach(function(div) {
           $("" + div + "-blurb").hide();
         })
+        $("#mug-blurb").show("fast");
       };
 
       function focus(focus) {
-        var divs = ["#developer", "#music", "#about"]
-        $("" + focus + "-blurb").toggle("fast");
+        var divs = ["#mug", "#developer", "#music", "#about"]
+        $("" + focus + "-blurb").show("fast");
         divs.forEach(function(div) {
           if (div != focus) { $("" + div + "-blurb").hide(); }
         })
